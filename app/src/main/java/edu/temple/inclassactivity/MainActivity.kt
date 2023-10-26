@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity(), ImageDisplayFragment.ImageSelectedInte
         val imageArray = IntArray(typedArray.length()) {typedArray.getResourceId(it, 0)}
         typedArray.recycle()
 
+
+        if
+        (supportFragmentManager.findFragmentById(R.id.ImageDisplayFragment)) as ImageDisplayFragment
+            .setImages(imageArray)
+
         // Attach an instance of ImageDisplayFragment using factory method
 //        if (supportFragmentManager.findFragmentById(R.id.fragmentContainerView) !is ImageDisplayFragment)
 //            supportFragmentManager
