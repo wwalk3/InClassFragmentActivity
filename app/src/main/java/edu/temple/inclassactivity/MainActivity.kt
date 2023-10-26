@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity(), ImageDisplayFragment.ImageSelectedInte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val imagesViewModel = ViewModelProvider(this)[ImagesViewModel::class.java] //who is the view model owner? We want it scoped to the Activity
+
         if (::someVar.isInitialized)
 
         val mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
